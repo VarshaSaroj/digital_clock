@@ -1,0 +1,109 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    height: 100vh;
+    background: #0b0b0b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+    overflow: hidden;
+  }
+  
+  .container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  #time {
+    display: flex;
+    gap: 40px;
+    position: relative;
+  }
+  .circle {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    --color: #fff;
+    overflow: visible;
+  }
+  
+  .circle svg {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    transform: rotate(-90deg);
+    overflow: visible;
+  }
+  
+  .circle svg circle {
+    fill: none;
+    stroke: #2c2c2c;
+    stroke-width: 10px;
+    stroke-linecap: round;
+  }
+  
+  .circle svg circle:nth-child(2) {
+    stroke: var(--color);
+    stroke-width: 10px;
+    stroke-dasharray: 565.48; /* 2πr for r=90 */
+    stroke-dashoffset: 565.48;
+    transition: stroke-dashoffset 1s linear;
+    filter: drop-shadow(0 0 5px var(--color));
+  }
+/*    */
+  /* .dots { */
+    /* position: absolute; */
+    /* width: 100%; */
+    /* height: 100%; */
+    /* display: flex; */
+    /* justify-content: center; */
+    /* align-items: center; */
+    /* transform: rotate(0deg); */
+  /* } */
+/*    */
+  /* .dots::before { */
+    /* content: ""; */
+    /* width: 16px; */
+    /* height: 16px; */
+    /* background: var(--color); */
+    /* border-radius: 50%; */
+    /* box-shadow: 0 0 20px var(--color), 0 0 40px var(--color); */
+    /* transform: translateY(-90px); */
+  /* } */
+/*    */
+  #hours, #minutes, #seconds {
+    text-align: center;
+    color: white;
+  }
+  
+  #hours p,
+  #minutes p,
+  #seconds p {
+    font-size: 2.5rem;
+    font-weight: bold;
+  }
+  
+  .time-text {
+    font-size: 1.2rem;
+    color: #aaa;
+    font-weight: 400;
+  }
+  
+  .ap {
+    margin-top: 60px;
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+  }
+  
